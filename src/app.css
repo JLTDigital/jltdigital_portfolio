@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+
+@font-face {
+	font-family: 'Grafmassa';
+	src: url('/fonts/Grafmassa-Regular.ttf') format('ttf');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@layer base {
+	html {
+		font-family: 'Orbitron', system-ui, sans-serif;
+		font-weight: black;
+	}
+}
+
+@utility container {
+	margin: 0 auto;
+	justify-content: center;
+	max-width: 1400px;
+}

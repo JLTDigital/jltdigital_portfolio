@@ -7,7 +7,7 @@ const projects = [
 		subdescription:
 			'Built as a unique Software-as-a-Service landing page with React and Tailwind CSS.',
 		href: 'https://silver-figolla-cd6c00.netlify.app/',
-		github: '#',
+		github: 'https://github.com/JLTDigital/Saas-Project',
 		image: '/xora.png'
 	},
 	{
@@ -17,7 +17,7 @@ const projects = [
 		subdescription:
 			'With Blockchain & DeFi Resources, users can experience the current places to go in the space, where they can contribute, work together or even game.',
 		href: 'https://defi-mocha.vercel.app/',
-		github: '#',
+		github: 'https://github.com/JLTDigital/Defi',
 		image: '/bandd.png'
 	},
 	{
@@ -35,7 +35,7 @@ const projects = [
 			'A concept website for a fresh food / meal delivery website. This platform was designed to be a modern and stylish website with a clean set up that simplifies the subscription service',
 		subdescription: 'Project was built with Vanilla Javascript, HTML5, CSS3 and Bootsrap',
 		href: 'https://optimistic-wilson-edbc0d.netlify.app/',
-		github: '#',
+		github: 'https://github.com/JLTDigital/youfood-concept',
 		image: '/youfood.png'
 	}
 ];

@@ -3,15 +3,21 @@
   import { navLinks } from '$lib/components/navigation';
   
   let navbar: HTMLElement;
+
   let scrollY = 0;
   let prevScrollpos = scrollY;
   let prevScrollpos2 = scrollY;
 
+  let isBgTransparent = true;
+  let backgroundClasses = 'bg-opacity-0 border-opacity-0';
+
   onMount(() => {
+    changeColors();
     autoHideMenu();
     window.onscroll = async () => {
       autoHideMenu();
       autoHideNavbar();
+      changeColors();
     };
   });
 
@@ -20,14 +26,33 @@
     if (prevScrollpos > currentScrollPos) {
       navbar.style.top = '0';
     } else {
-      navbar.style.top = '-100px';
+      navbar.style.top = '-140px';
     }
     prevScrollpos = currentScrollPos;
   }
 
+  function changeColors() {
+    if (scrollY < 150) {
+      isBgTransparent = true;
+      backgroundClasses = 'bg-opacity-0 border-opacity-0 transition';
+    } else if (scrollY < 180) {
+      isBgTransparent = true;
+      backgroundClasses = 'bg-opacity-20 border-opacity-0 bg-[#EDE621] transition';
+    } else if (scrollY < 200) {
+      isBgTransparent = true;
+      backgroundClasses = 'bg-opacity-30 border-opacity-0 bg-[#EDE621] transition';
+    } else if (scrollY < 250) {
+      isBgTransparent = true;
+      backgroundClasses = 'bg-opacity-40 border-opacity-0 bg-[#EDE621] trasnsition';
+    } else {
+      isBgTransparent = false;
+      backgroundClasses = 'bg-opacity-100 border-opacity-100 bg-[#EDE621] border-black border-b-4 transition duration-300';
+    }
+  }
+
   function autoHideMenu() {
     let currentScrollPos = scrollY;
-    if (currentScrollPos > prevScrollpos2 + 250 || currentScrollPos < prevScrollpos2 - 250) {
+    if (currentScrollPos > prevScrollpos2 + 250 || currentScrollPos < prevScrollpos2 - 350) {
       prevScrollpos2 = currentScrollPos;
     }
   }
@@ -35,9 +60,9 @@
 
   <svelte:window bind:scrollY />
 
-  <section bind:this={navbar} class="fixed top-0 left-0 w-full z-40 duration-300">
+  <section bind:this={navbar} class="fixed top-0 left-0 w-full z-40 duration-300 transition {backgroundClasses}">
     <div class="container">
-      <nav class="flex items-center justify-between px-10 py-10 w-full bg-transparent">
+      <nav class="flex items-center justify-between px-10 py-10 w-full">
       <div class="flex items-center">
         <h1 class="text-3xl text-[#FF1211] tracking-widest font-['grafmassa']">JLTDIGITAL</h1>
       </div>

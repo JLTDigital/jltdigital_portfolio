@@ -1,39 +1,56 @@
-# sv
+# JLTDigital Portfolio
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+This is the personal portfolio website for Jonny, a Frontend Developer and Shopify Developer. The site is built in a Neo-Brutalist style using SvelteKit and Tailwind CSS, and showcases projects, skills, and contact information.
 
-## Creating a project
+## Features
 
-If you're seeing this, you've probably already done this step. Congrats!
+- Neo-Brutalist design with custom colors and fonts
+- Responsive layout for desktop, tablet, and mobile
+- Animated scrolling tech bar with technology icons
+- Project showcase with links to live sites and GitHub
+- Contact and social links section
+
+## Technologies Used
+
+- [SvelteKit](https://kit.svelte.dev/) — Application framework
+- [Tailwind CSS](https://tailwindcss.com/) — Utility-first CSS framework
+- [@iconify/svelte](https://iconify.design/) — Icon library for tech icons
+- [@selemondev/svelte-marquee](https://www.npmjs.com/package/@selemondev/svelte-marquee) — Marquee animation for tech bar
+- Custom fonts: Orbitron (Google Fonts), Grafmassa (local)
+
+## Getting Started
+
+Install dependencies:
 
 ```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+npm install
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Start the development server:
 
 ```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
-
-To create a production version of your app:
+Build for production:
 
 ```bash
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+Preview the production build:
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
-# jltdigital_portfolio
+```bash
+npm run preview
+```
+
+## Folder Structure
+
+- `src/lib/components/` — Svelte components for each section
+- `src/api/projects/` — Project data
+- `static/fonts/` — Custom font files
+- `static/` — Images and assets
+
+## License
+
+This project is for personal portfolio use by Jonny (JLTDigital).

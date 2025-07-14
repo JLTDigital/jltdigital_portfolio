@@ -7,6 +7,9 @@ export default {
 		'./node_modules/@selemondev/svelte-marquee/dist/*.svelte'
 	],
 	theme: {
+		container: {
+			center: true
+		},
 		extend: {
 			keyframes: {
 				'marquee-left': {

@@ -7,9 +7,9 @@
     <!-- Left column: text and button -->
     <div class="flex flex-col gap-6 z-10 h-full justify-center">
       <div class="bg-white p-8 rounded shadow-xl w-100 rotate-355">
-        <span class="font-['orbitron'] font-black text-black mb-2 text-3xl">I'm Jonny,<br>Frontend Developer<br>Shopify Developer</span>
+        <span class="font-['orbitron'] font-black text-black mb-2 text-5xl">I'm Jonny,<br>Full Stack Developer</span>
       </div>
-      <button class="mt-2 px-6 py-4 w-1/3 border-2 border-[#000000] rounded bg-white transition" style="box-shadow: 6px 6px 0 0 #E879F9;"><span class="font-['orbitron'] font-black text-black">
+      <button class="btn-shadow-drop mt-2 px-6 py-4 w-1/3 border-2 border-[#000000] rounded bg-white transition" style="box-shadow: 6px 6px 0 0 #E879F9;"><span class="font-['orbitron'] font-black text-black">
         <a href="#contact">Contact Me</a></span></button>
     </div>
     <!-- Right column: image -->

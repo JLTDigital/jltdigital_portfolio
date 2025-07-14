@@ -68,7 +68,7 @@
       </div>
       <div class="flex gap-6">
       {#each navLinks as link}
-            <a class="px-6 py-2 border-2 w-40 text-center border-black rounded bg-white transition" href="#{link.link}" style="box-shadow: 6px 6px 0 0 #{link.color};"><span class="font-['orbitron'] font-black text-black">{link.text}</span></a>
+            <a class="btn-shadow-drop px-6 py-2 border-2 w-40 text-center border-black rounded bg-white transition" href="#{link.link}" style="box-shadow: 6px 6px 0 0 #{link.color};"><span class="font-['orbitron'] font-black text-black">{link.text}</span></a>
           {/each}
       </div>
     </nav>

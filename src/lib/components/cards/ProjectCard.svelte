@@ -11,6 +11,6 @@
     <span class="text-xl">{project.title}</span><br>
     <span class="text-sm">{project.subdescription}</span>  
   </div>
-    <a href={project.href} target="_blank" class="w-full mb-5 px-4 py-2 mt-10 border-2 border-[#21D2ED] rounded bg-white text-black font-orbitron font-black transition" style="box-shadow: 6px 6px 0 0 #21D2ED;">Visit</a>
-    <a href={project.github} target="_blank" class="w-full px-4 py-2 border-2 border-[#21D2ED] rounded bg-white text-black font-orbitron font-black transition" style="box-shadow: 6px 6px 0 0 #2DD4BF;">Github</a>
+    <a href={project.href} target="_blank" class="btn-shadow-drop w-full mb-5 px-4 py-2 mt-10 border-2 border-[#21D2ED] rounded bg-white text-black font-orbitron font-black transition" style="box-shadow: 6px 6px 0 0 #21D2ED;">Visit</a>
+    <a href={project.github} target="_blank" class="btn-shadow-drop w-full px-4 py-2 border-2 border-[#21D2ED] rounded bg-white text-black font-orbitron font-black transition" style="box-shadow: 6px 6px 0 0 #2DD4BF;">Github</a>
 </div>

@@ -19,3 +19,16 @@
 	justify-content: center;
 	max-width: 1400px;
 }
+
+.btn-shadow-drop {
+	position: relative;
+	left: 0;
+	top: 0;
+	transition: 0.3s ease-in-out;
+}
+
+.btn-shadow-drop:hover {
+	left: 4px;
+	top: 4px;
+	box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px !important;
+}

@@ -56,7 +56,7 @@
       prevScrollpos2 = currentScrollPos;
     }
   }
-  </script>
+</script>
 
   <svelte:window bind:scrollY />
 
@@ -64,11 +64,11 @@
     <div class="container">
       <nav class="flex items-center justify-between px-10 py-10 w-full">
       <div class="flex items-center">
-        <h1 class="text-3xl text-[#FF1211] tracking-widest font-['grafmassa']">JLTDIGITAL</h1>
+        <h1 class="lg:text-3xl sm:text-xl text-[#FF1211] tracking-widest font-['grafmassa']">JLTDIGITAL</h1>
       </div>
       <div class="flex gap-6">
       {#each navLinks as link}
-            <a class="btn-shadow-drop px-6 py-2 border-2 w-40 text-center border-black rounded bg-white transition" href="#{link.link}" style="box-shadow: 6px 6px 0 0 #{link.color};"><span class="font-['orbitron'] font-black text-black">{link.text}</span></a>
+            <a class="btn-shadow-drop px-6 py-2 border-2 lg:w-40 text-center border-black rounded bg-white transition" href="#{link.link}" style="box-shadow: 6px 6px 0 0 #{link.color};"><span class="font-['orbitron'] font-black text-black">{link.text}</span></a>
           {/each}
       </div>
     </nav>

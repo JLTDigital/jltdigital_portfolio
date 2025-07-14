@@ -11,6 +11,10 @@
   let isBgTransparent = true;
   let backgroundClasses = 'bg-opacity-0 border-opacity-0';
 
+  let menuOpen = false;
+
+  let lastScrollY = 0;
+
   onMount(() => {
     changeColors();
     autoHideMenu();
@@ -18,6 +22,10 @@
       autoHideMenu();
       autoHideNavbar();
       changeColors();
+      if (menuOpen && scrollY > lastScrollY) {
+        menuOpen = false;
+      }
+      lastScrollY = scrollY;
     };
   });
 
@@ -56,22 +64,41 @@
       prevScrollpos2 = currentScrollPos;
     }
   }
+
+  function toggleMenu() {
+    menuOpen = !menuOpen;
+  }
 </script>
 
-  <svelte:window bind:scrollY />
+<svelte:window bind:scrollY />
 
-  <section bind:this={navbar} class="fixed top-0 left-0 w-full z-40 duration-300 transition {backgroundClasses}">
-    <div class="container">
-      <nav class="flex items-center justify-between px-10 py-10 w-full">
+<section bind:this={navbar} class="fixed top-0 left-0 w-full z-40 duration-300 transition {backgroundClasses}">
+  <div class="container mx-auto px-2 sm:px-4">
+    <nav class="flex items-center justify-between px-4 sm:px-10 py-4 sm:py-10 w-full">
       <div class="flex items-center">
-        <h1 class="lg:text-3xl sm:text-xl text-[#FF1211] tracking-widest font-['grafmassa']">JLTDIGITAL</h1>
+        <h1 class="text-xl sm:text-2xl lg:text-3xl text-[#FF1211] tracking-widest font-['grafmassa']">JLTDIGITAL</h1>
       </div>
-      <div class="flex gap-6">
-      {#each navLinks as link}
-            <a class="btn-shadow-drop px-6 py-2 border-2 lg:w-40 text-center border-black rounded bg-white transition" href="#{link.link}" style="box-shadow: 6px 6px 0 0 #{link.color};"><span class="font-['orbitron'] font-black text-black">{link.text}</span></a>
-          {/each}
+      <!-- Hamburger for mobile -->
+      <div class="sm:hidden flex items-center">
+        <button aria-label="Open menu" class="focus:outline-none" on:click={toggleMenu}>
+          <svg width="32" height="32" fill="none" stroke="#FF1211" stroke-width="3" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+      <!-- Nav links desktop/tablet -->
+      <div class="hidden sm:flex gap-6">
+        {#each navLinks as link}
+          <a class="btn-shadow-drop px-6 py-2 border-2 lg:w-40 text-center border-black rounded bg-white transition" href={`#${link.link}`} style={`box-shadow: 6px 6px 0 0 ${link.color};`}><span class="font-['orbitron'] font-black text-black">{link.text}</span></a>
+        {/each}
       </div>
     </nav>
+    <!-- Mobile menu -->
+    {#if menuOpen}
+      <div class="sm:hidden absolute top-full left-0 w-full bg-[#EDE621] border-b-4 border-black z-50 flex flex-col items-center py-4 gap-4 shadow-xl">
+        {#each navLinks as link}
+          <a class="btn-shadow-drop px-6 py-2 border-2 w-5/6 text-center border-black rounded bg-white transition text-lg" href={`#${link.link}`} style={`box-shadow: 6px 6px 0 0 ${link.color};`} on:click={() => menuOpen = false}><span class="font-['orbitron'] font-black text-black">{link.text}</span></a>
+        {/each}
+      </div>
+    {/if}
   </div>
 </section>
 

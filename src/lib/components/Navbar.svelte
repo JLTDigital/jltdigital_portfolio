@@ -4,16 +4,16 @@
   
   let navbar: HTMLElement;
 
-  let scrollY = 0;
-  let prevScrollpos = scrollY;
-  let prevScrollpos2 = scrollY;
+  let scrollY: number = 0;
+  let prevScrollpos: number = scrollY;
+  let prevScrollpos2: number = scrollY;
 
-  let isBgTransparent = true;
-  let backgroundClasses = 'bg-opacity-0 border-opacity-0';
+  let isBgTransparent: boolean = true;
+  let backgroundClasses: string = 'bg-opacity-0 border-opacity-0';
 
-  let menuOpen = false;
+  let menuOpen: boolean = false;
 
-  let lastScrollY = 0;
+  let lastScrollY: number = 0;
 
   onMount(() => {
     changeColors();

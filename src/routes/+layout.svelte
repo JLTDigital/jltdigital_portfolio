@@ -8,9 +8,11 @@
   import Footer from '../lib/components/Footer.svelte';
 </script>
 
-<Navbar />
-<Hero />
-<TechBar />
-<Projects />
-<Connect />
-<Footer />
+<div itemscope itemtype="https://schema.org/WebPage">
+  <Navbar />
+  <Hero />
+  <TechBar />
+  <Projects />
+  <Connect />
+  <Footer />
+</div>

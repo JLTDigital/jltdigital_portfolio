@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
   import { Marquee } from "@selemondev/svelte-marquee";
   import "../../marquee.css";
   import Icon from '@iconify/svelte';
-  const techs = [
+  const techs: Array<{ icon: string; color: string }> = [
     { icon: 'logos:html-5', color: '#FF1211' },
     { icon: 'logos:css-3', color: '#21D2ED' },
     { icon: 'logos:javascript', color: '#FFD600' },

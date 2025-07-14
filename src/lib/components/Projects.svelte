@@ -1,7 +1,6 @@
-<script>
+<script lang="ts">
   import { projects } from '../api/projects/projects';
   import ProjectCard from "./cards/ProjectCard.svelte";
-
 </script>
 
 <section id="projects" class="py-16 bg-white">

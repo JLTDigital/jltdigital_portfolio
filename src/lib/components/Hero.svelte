@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   // No props needed for now
 </script>
 

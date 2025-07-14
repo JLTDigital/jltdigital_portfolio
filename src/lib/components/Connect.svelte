@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { socials } from '../api/socials/socials';
   import SocialButton from './buttons/SocialButton.svelte';
 </script>

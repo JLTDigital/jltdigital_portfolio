@@ -26,7 +26,7 @@ const projects = [
 			'Converter application to convert GBP or USD to a range of Crypto currencies using Coin Geckos API. Allows you to store your holdings using local storage.',
 		subdescription: 'Project was built with React and Tailwind',
 		href: 'https://deluxe-klepon-e1f343.netlify.app/',
-		github: '#',
+		github: 'https://github.com/JLTDigital/Degen-Crypto-Converter',
 		image: '/degen.png'
 	},
 	{

@@ -72,7 +72,7 @@
 
 <svelte:window bind:scrollY />
 
-<section bind:this={navbar} class="fixed top-0 left-0 w-full z-40 duration-300 transition {backgroundClasses}">
+<section bind:this={navbar} class="fixed top-0 left-0 w-full z-40 duration-300 transition {backgroundClasses} {menuOpen ? 'bg-[#EDE621] border-b-4 border-black' : ''}">
   <div class="container mx-auto px-2 sm:px-4">
     <nav class="flex items-center justify-between px-4 sm:px-10 py-4 sm:py-10 w-full">
       <div class="flex items-center">
@@ -87,7 +87,7 @@
       <!-- Nav links desktop/tablet -->
       <div class="hidden sm:flex gap-6">
         {#each navLinks as link}
-          <a class="btn-shadow-drop px-6 py-2 border-2 lg:w-40 text-center border-black rounded bg-white transition" href={`#${link.link}`} style={`box-shadow: 6px 6px 0 0 ${link.color};`}><span class="font-['orbitron'] font-black text-black">{link.text}</span></a>
+          <a class="btn-shadow-drop px-6 py-2 border-2 lg:w-40 text-center border-black rounded bg-white transition" href={`#${link.link}`} style={`box-shadow: 6px 6px 0 0 #${link.color};`}><span class="font-['orbitron'] font-black text-black">{link.text}</span></a>
         {/each}
       </div>
     </nav>
@@ -95,7 +95,7 @@
     {#if menuOpen}
       <div class="sm:hidden absolute top-full left-0 w-full bg-[#EDE621] border-b-4 border-black z-50 flex flex-col items-center py-4 gap-4 shadow-xl">
         {#each navLinks as link}
-          <a class="btn-shadow-drop px-6 py-2 border-2 w-5/6 text-center border-black rounded bg-white transition text-lg" href={`#${link.link}`} style={`box-shadow: 6px 6px 0 0 ${link.color};`} on:click={() => menuOpen = false}><span class="font-['orbitron'] font-black text-black">{link.text}</span></a>
+          <a class="btn-shadow-drop px-6 py-2 border-2 w-5/6 text-center border-black rounded bg-white transition text-lg" href={`#${link.link}`} style={`box-shadow: 6px 6px 0 0 #${link.color};`} on:click={() => menuOpen = false}><span class="font-['orbitron'] font-black text-black">{link.text}</span></a>
         {/each}
       </div>
     {/if}

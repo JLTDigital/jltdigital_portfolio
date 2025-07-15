@@ -20,7 +20,7 @@
 }
 
 body {
-	cursor: url('cursor.png'), default;
+	cursor: url('/cursor.png'), default;
 }
 
 .btn-shadow-drop {

@@ -2,7 +2,7 @@
 
 @font-face {
 	font-family: 'Grafmassa';
-	src: url('/fonts/Grafmassa-Regular.ttf') format('ttf');
+	src: url('/fonts/Grafmassa-Regular.ttf');
 	font-weight: 900;
 	font-style: normal;
 }

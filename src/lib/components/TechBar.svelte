@@ -2,6 +2,7 @@
   import { Marquee } from "@selemondev/svelte-marquee";
   import "../../marquee.css";
   import Icon from '@iconify/svelte';
+
   const techs: Array<{ icon: string; color: string }> = [
     { icon: 'logos:html-5', color: '#FF1211' },
     { icon: 'logos:css-3', color: '#21D2ED' },
@@ -23,7 +24,7 @@
 
 <div class="w-full bg-[#EDE621] py-6 overflow-hidden border-b-4 border-black">
   <div class="relative w-full h-[72px] overflow-hidden">
-    <Marquee fade="true">
+    <Marquee fade={true}>
       {#each techs.concat(techs) as tech}
         <span class="inline-block">
           <Icon icon={tech.icon} width="60" height="60" style={`color: ${tech.color}`} />
@@ -32,6 +33,3 @@
     </Marquee> 
   </div>
 </div>
-<style>
-
-</style>

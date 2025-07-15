@@ -10,7 +10,7 @@
         <span class="font-['orbitron'] font-black text-black mb-2 text-xl sm:text-3xl lg:text-5xl">I'm Jonny,<br>Full Stack Developer</span>
       </div>
       <button class="btn-shadow-drop mt-4 px-3 py-3 sm:px-6 sm:py-4 w-2/3 md:w-1/3 border-2 border-[#000000] rounded bg-white transition text-base sm:text-lg lg:text-xl" style="box-shadow: 6px 6px 0 0 #E879F9;"><span class="font-['orbitron'] font-black text-black">
-        <a href="#contact">Contact Me</a></span></button>
+        <a class="hero-contact" href="#contact">Contact Me</a></span></button>
     </div>
     <!-- Right column: image -->
     <div class="flex justify-center items-center h-full w-full mt-10">

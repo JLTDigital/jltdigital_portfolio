@@ -19,6 +19,10 @@
 	max-width: 1400px;
 }
 
+body {
+	cursor: url('cursor.png'), default;
+}
+
 .btn-shadow-drop {
 	position: relative;
 	left: 0;
@@ -30,4 +34,9 @@
 	left: 4px;
 	top: 4px;
 	box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px !important;
+}
+
+.btn-shadow-drop:hover,
+.hero-contact:hover {
+	cursor: url('/cursor_hover_2.png'), pointer;
 }
